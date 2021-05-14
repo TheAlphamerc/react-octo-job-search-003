@@ -1,10 +1,11 @@
 import './App.css';
 
+import Body from './component/body.js';
 import Header from './component/header.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-gray-300 ">
       <Header/>
     </div>
   );
