@@ -1,38 +1,80 @@
 .App {
   text-align: center;
+  background: #f2f2f2;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.header .App-header {
+  display: flow-root;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 1.2em 1em 1.5em 1em;
+  background-color: #5964e0;
 }
 
-.App-link {
-  color: #61dafb;
+.header .App-header h3 {
+  float: left;
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header .App-header .header-controls {
+  display: bloc;
+  float: right;
+}
+
+.header  .App-header .header-controls svg{
+  margin-left: 16px;
+  
+}
+
+.header .search-control {
+  background: white;
+  box-sizing: border-box;
+  border: 0 solid #d2d6dc;
+  box-shadow: 0px 15px 10px #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+  position: relative;
+  top: 4.8rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0em 2em;
+  padding: .2em 1em
+}
+
+.header .search-control .input-control input{
+  border: none;
+  width: calc(90%);
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+.header .search-control div {
+  width: calc(100%);
+}
+
+
+
+.header .search-control .last {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .search-control .last h3{
+  display: inline-block;
+}
+
+
+.header .search-control .last .Search-button {
+  float: right;
+  background: #5964e0;
+  color: white;
+  border: 0 solid #d2d6dc;
+  padding: 10px 36px;
+  border-radius: 3px;
+  height: 3rem;
+  box-sizing: border-box;
 }
