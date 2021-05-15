@@ -15,17 +15,17 @@ http://TheAlphamerc.github.io/react-octo-job-search-003
 
 
 ### Preview
-#### Desktop View (Dark Model)
+#### Desktop View (Light Mode)
 <img src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-001.png">
 
-#### Desktop View (Light Model)
+#### Desktop View (Dark Mode)
 <img src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-002.png">
 
- Tablet View (Dark Model) | Tablet View (Dark Model)     |
+ Tablet View (Light Mode) | Tablet View (Dark Mode)     |
 | :--------: | :------- |
 |<img width=500  src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-003.png"> |<img width=500 src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-004.png"> |
 
- Mobile View (Dark Model) | Mobile View (Dark Model)  |
+ Mobile View (Light Mode) | Mobile View (Dark Mode)  |
 | :--------: | :-------: |
 |<img width=500  src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-005.png"> |<img width=500 src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-006.png"> |
 
