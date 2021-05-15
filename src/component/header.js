@@ -6,62 +6,25 @@ import {
   FiMoon,
   FiSearch,
   FiSun,
-  FiToggleLeft,
-  FiToggleRight,
 } from "react-icons/fi";
 
 import { AiFillCheckSquare } from "react-icons/ai";
 import React from "react";
 
-class HeaderUpparPart extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isToggleOn: true };
-    this.handleToggleClick = this.handleClick.bind(this);
-  }
-
-  // handleToggleClick() {
-  //   console.log(this.isToggleOn);
-  //   this.setState(state => ({
-  //     isToggleOn: !state.isToggleOn
-  //   }));
-  //   console.log(this.isToggleOn);
-  // }
-  handleClick() {
-    this.setState((prevState) => ({
-      isToggleOn: !prevState.isToggleOn,
-    }));
-  }
-
-  render() {
-    return (
-      <div className="object object-right space-x-2 text-white text-sm">
-        <FiSun className="inline-block" />
-        <button
-          className="outline-none m-0 focus:outline-none"
-          onClick={this.handleClick}
-        >
-          <FaToggleOn
-            className={
-              "inline-block text-2xl cursor-pointer" + !this.isToggleOn
-                ? "hidden"
-                : "block"
-            }
-          />
-          <FaToggleOff
-            className={
-              "inline-block text-2xl cursor-pointer" + this.isToggleOn
-                ? "block"
-                : "hidden"
-            }
-          />
-        </button>
-        <FiMoon className="inline-block" />
-      </div>
-    );
-  }
+function Header() {
+  return (
+    <div className="container max-w-full relative">
+      <header className="bg-primary space-x-4 pl-8 pr-4 pb-8 pt-4 flex place-content-between ">
+        <div className="inline-block text-4xl font-bold text-white">
+          <h3>DevJobs</h3>
+        </div>
+        <Toggle />
+      </header>
+      <SearchControlSmall />
+      <SearchControlLarge />
+    </div>
+  );
 }
-
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
@@ -76,6 +39,11 @@ class Toggle extends React.Component {
     this.setState((prevState) => ({
       isToggleOn: !prevState.isToggleOn,
     }));
+    if(this.state.isToggleOn){
+      document.documentElement.classList.add('dark')
+    }else{
+      document.documentElement.classList.remove('dark')
+    }
   }
 
   render() {
@@ -88,58 +56,43 @@ class Toggle extends React.Component {
     }
     return (
       <div className="object object-right space-x-2 text-white text-sm items-center flex">
-        <FiSun className="inline-block" />
+        <FiMoon className="inline-block" />
         <button
           className="outline-none m-0 text-3xl focus:outline-none self-center mb-2"
           onClick={this.handleClick}
         >
           {toggleButton}
         </button>
-        <FiMoon className="inline-block" />
+        <FiSun className="inline-block" />
       </div>
     );
   }
 }
 
-function Header() {
-  return (
-    <div className="container max-w-full relative mb-12">
-      <header className="bg-primary space-x-4 pl-8 pr-4 pb-14 pt-6 flex place-content-between ">
-        <div className="inline-block text-4xl font-bold text-white">
-          <h3>DevJobs</h3>
-        </div>
-        <Toggle />
-      </header>
-      <SearchControlSmall />
-      <SearchControlLarge />
-    </div>
-  );
-}
-
 function SearchControlLarge() {
   return (
     <div className="hidden md:block">
-      <div className="max-w-full bg-white shadow-sm ml-10 mr-10 rounded-md absolute top-16 right-0 left-0 grid grid-cols-3 gap-4 px-4  mt-6 ">
-        <div className="flex align-middle place-items-center border-r border-gray-300 py-7 flex-grow ">
+      <div className="max-w-full bg-white dark:bg-cardColor shadow-sm ml-10 mr-10 rounded-md absolute top-10 right-0 left-0 grid grid-cols-3 gap-4 px-4  mt-6 ">
+        <div className="flex align-middle place-items-center border-r border-gray-300 dark:border-gray-700 py-7 flex-grow ">
           <FiSearch className="inline-block  text-primary text-2xl" />
           <input
-            className="flex-grow mx-2 h-7 outline-none"
+            className="flex-grow mx-2 h-7 outline-none dark:bg-cardColor dark:text-gray-400 text-black"
             type="text"
             placeholder="Filter by text"
           />
         </div>
-        <div className="flex align-middle place-items-center border-r border-gray-300 py-3 ">
+        <div className="flex align-middle place-items-center border-r border-gray-300 dark:border-gray-700 py-3 ">
           <FiMapPin className="inline-block  text-primary text-2xl" />
           <input
-            className="flex-grow mx-2 h-7 outline-none"
+            className="flex-grow mx-2 h-7 outline-none dark:bg-cardColor dark:text-gray-400 text-black"
             type="text"
             placeholder="Filter by location"
           />
         </div>
         <div className="justify-between  flex align-middle place-items-center">
           <div className="flex  place-items-center">
-            <AiFillCheckSquare className="inline-block text-primary h-6 w-6 text-2xl mr-2" />
-            <h3 className="inline-block text-lg font-semibold overflow-clip overflow-hidden text-center">
+            <AiFillCheckSquare className="inline-block text-primary h-6 w-6 text-2xl mr-2 "/>
+            <h3 className="inline-block text-lg font-semibold overflow-clip overflow-hidden text-center dark:text-gray-200">
               Full Time Only
             </h3>
           </div>
@@ -155,12 +108,12 @@ function SearchControlLarge() {
 function SearchControlSmall() {
   return (
     <div className="  md:hidden  ">
-      <div className="max-w-full bg-white shadow-sm ml-10 mr-10 rounded-md absolute top-16 right-0 left-0 grid grid-cols-1 px-4 py-5  mt-6 sm:mx-20">
+      <div className="max-w-full bg-white  dark:bg-cardColor shadow-sm ml-10 mr-10 rounded-md absolute top-10 right-0 left-0 grid grid-cols-1 px-4 py-5  mt-6 sm:mx-20">
         <div className="flex justify-between">
           <div className="flex place-items-center  flex-grow">
             <FiSearch className="inline-block text-primary text-2xl" />
             <input
-              className="flex-grow mx-2 h-7 outline-none"
+              className="flex-grow mx-2 h-7 outline-none dark:bg-cardColor dark:text-gray-400 text-black"
               type="text"
               placeholder="Filter by text"
             />
