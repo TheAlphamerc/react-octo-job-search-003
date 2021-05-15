@@ -30,5 +30,11 @@ http://TheAlphamerc.github.io/react-octo-job-search-003
 |<img width=500  src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-005.png"> |<img width=500 src="https://raw.githubusercontent.com/TheAlphamerc/react-octo-job-search-003/main/screenshots/screenshot-006.png"> |
 
 
+## Mobile App
+Octo Job Search app is a job search app built in  [Flutter](https://flutter.dev/) framwork. 
+* Repository:- [Octo Job Search](https://github.com/TheAlphamerc/flutter_octo_job_search)
+* App link:- [Play Store](https://play.google.com/store/apps/details?id=com.thealphamerc.flutter_octo_job_search)
+
+
 ## Visitors Count
 <img align="left" src = "https://profile-counter.glitch.me/rreact-octo-job-search-003//count.svg" alt ="Loading">
